@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>T-AO 213 Integration Control Center</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<div id="login-screen" class="login-screen hidden">
+  <form id="login-form" class="login-card">
+    <h1>T-AO 213 Integration Control Center</h1>
+    <p class="muted">Operator sign-in required.</p>
+    <input id="login-password" type="password" placeholder="Operator password" autocomplete="current-password" />
+    <button type="submit">Sign in</button>
+    <p id="login-error" class="error hidden"></p>
+  </form>
+</div>
+
+<div id="app" class="app hidden">
+  <header class="topbar">
+    <div class="topbar-title">
+      <span class="title-main">T-AO 213 Integration Control Center</span>
+      <span class="title-sub">TAO213 DemoOps</span>
+    </div>
+    <div class="topbar-status" id="topbar-status"></div>
+    <div class="topbar-actions">
+      <button id="btn-health-check" class="btn-secondary">Run Health Check</button>
+      <button id="btn-reset" class="btn-danger">Reset Demo</button>
+      <button id="btn-logout" class="btn-ghost">Sign out</button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs">
+    <button class="tab active" data-tab="overview">Overview</button>
+    <button class="tab" data-tab="interfaces">Interfaces</button>
+    <button class="tab" data-tab="scenarios">Scenarios</button>
+    <button class="tab" data-tab="equipment">Equipment</button>
+    <button class="tab" data-tab="agentfabric">Agent Fabric</button>
+    <button class="tab" data-tab="traces">Traces</button>
+  </nav>
+
+  <main id="view" class="view"></main>
+</div>
+
+<div id="drawer-backdrop" class="drawer-backdrop hidden"></div>
+<div id="drawer" class="drawer hidden"></div>
+
+<div id="modal-backdrop" class="modal-backdrop hidden"></div>
+<div id="modal" class="modal hidden"></div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script src="/api.js"></script>
+<script src="/views/overview.js"></script>
+<script src="/views/interfaces.js"></script>
+<script src="/views/scenarios.js"></script>
+<script src="/views/equipment.js"></script>
+<script src="/views/agentfabric.js"></script>
+<script src="/views/traces.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>

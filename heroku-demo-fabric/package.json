@@ -1,0 +1,22 @@
+{
+  "name": "heroku-demo-fabric",
+  "version": "1.0.0",
+  "description": "Externally-reachable T-AO 213 demo-system fabric (SAP + Contracts + Engineering) for cloud-deployed Mule/Agent Fabric consumers. No live SAP/Ironclad/AVEVA integration exists -- deterministic mock, same EQP-001..EQP-100 catalog as mocks/sap-mock and mocks/ironclad-mock.",
+  "main": "server.js",
+  "type": "commonjs",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cookie-session": "^2.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
